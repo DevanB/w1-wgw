@@ -1,0 +1,19 @@
+.header {
+  background-color: #091353;
+}
+
+.header-wrapper {
+  /* max-width: 110px; */
+}
+
+.mobile-menu {
+  /* width: 100%; */
+}
+
+.mobile-menu-item {
+}
+
+.desktop-menu {
+  margin-top: 2.5rem;
+  @apply flex items-center justify-between text-center text-white;
+}

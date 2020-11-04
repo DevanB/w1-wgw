@@ -1,0 +1,7 @@
+.top-banner {
+  background-color: rgb(247, 148, 29);
+  font-size: 1.25rem;
+  padding: 0.55rem;
+  @apply flex items-center justify-center;
+}
+

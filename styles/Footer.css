@@ -1,0 +1,35 @@
+.footer {
+  background-color: #091353;
+  @apply flex flex-col items-center justify-center;
+}
+
+.wrapper {
+  @apply flex flex-col items-center;
+}
+
+.mailingList {
+  margin-top: 1.5rem;
+  @apply flex flex-col items-center;
+}
+
+.heading {
+  @apply text-white uppercase;
+}
+
+.stayConnected-wrapper {
+  margin-top: 3rem;
+  @apply flex flex-col items-center;
+}
+
+.stayConnected-socials-wrapper {
+  @apply flex;
+}
+
+.fineprint-wrapper {
+  margin: 3rem 0;
+  @apply flex flex-col;
+}
+
+.fineprint {
+  @apply text-center text-white;
+}

@@ -1,18 +1,26 @@
-@tailwind base;
+@import './inter.css';
 
-/* Write your own custom base styles here */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
+@import './TopBanner.css';
+@import './Footer.css';
+@import './Header.css';
 
-/* Write your own custom component styles here */
 .btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+}
+.contact-us {
+  @apply flex flex-col bg-orange-500;
+}
+.topic {
+  @apply tracking-wider text-white uppercase;
+}
+.heading-2 {
+  @apply font-serif text-3xl tracking-wider text-white;
+}
+.intro-text {
+  @apply tracking-wider text-white;
 }
 
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */
