@@ -4,9 +4,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import './TopBanner.css';
 @import './Footer.css';
-@import './Header.css';
 
 .btn-blue {
   @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;

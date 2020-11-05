@@ -1,6 +1,5 @@
 .footer {
-  background-color: #091353;
-  @apply flex flex-col items-center justify-center;
+  @apply flex flex-col items-center justify-center bg-brand-blue;
 }
 
 .wrapper {
