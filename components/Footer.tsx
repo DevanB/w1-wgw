@@ -3,22 +3,22 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="px-4 footer">
-      <div className="mx-auto wrapper max-w-7xl">
-        <Image
-          src="/baptisteLogo.png"
-          alt="Baptist Power Vinyasa Flow Yoga logo"
-          width={250}
-          height={109}
-        />
+    <footer className="flex items-center px-4 py-4 bg-brand-blue md:py-8">
+      <div className="flex flex-col items-center mx-auto max-w-7xl space-y-10 md:grid md:grid-cols-3 md:gap-6 md:gap-y-12 md:space-y-0">
+        <div className="md:order-2 md:flex md:items-center md:justify-center">
+          <Image
+            src="/baptisteLogo.png"
+            alt="Baptist Power Vinyasa Flow Yoga logo"
+            width={250}
+            height={109}
+          />
+        </div>
 
-        <div className="pt-8 space-y-4 lg:space-y-0 lg:flex lg:items-center lg:justify-between xl:mt-0">
-          <div>
-            <h4 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase leading-5">
-              Join our mailing list
-            </h4>
-          </div>
-          <form className="sm:flex sm:max-w-md">
+        <div className="flex flex-col items-center md:order-1">
+          <h4 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase leading-5">
+            Join our mailing list
+          </h4>
+          <form className="flex flex-col max-w-md space-y-2">
             <label htmlFor="emailAddress" className="sr-only">
               Email address
             </label>
@@ -29,7 +29,7 @@ export function Footer() {
               className="w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-white border border-gray-300 appearance-none leading-6 rounded-md focus:outline-none focus:border-blue-300 focus:shadow-outline focus:placeholder-gray-400 transition duration-150 ease-in-out sm:max-w-xs"
               placeholder="Enter your email address"
             />
-            <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+            <div className="flex-shrink-0 rounded-md">
               <button
                 type="submit"
                 className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-black border border-transparent bg-brand-orange rounded-md leading-6 hover:bg-orange-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
@@ -40,11 +40,11 @@ export function Footer() {
           </form>
         </div>
 
-        <div className="stayConnected-wrapper">
+        <div className="flex flex-col items-center md:order-3 md:justify-center">
           <h4 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase leading-5">
             Stay Connected
           </h4>
-          <div className="mt-3 stayConnected-socials-wrapper">
+          <div className="flex mt-3">
             <a
               target="_blank"
               rel="noreferrer nofollow"
@@ -78,12 +78,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="fineprint-wrapper">
-          <small className="fineprint">
+        <div className="flex flex-col mb-6 text-center text-white md:order-4 md:col-span-full space-y-4">
+          <small>
             Copyright © {new Date().getFullYear()} Warior One WGW. All Rights
             Reserved.
           </small>
-          <small className="fineprint">
+          <small>
             <Link href="/privacy-notice">
               <a>Privacy Notice</a>
             </Link>{" "}

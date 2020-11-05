@@ -32,6 +32,9 @@ module.exports = {
       maxWidth: {
         xxs: "15rem",
       },
+      zIndex: {
+        "-10": "-10",
+      },
     },
   },
   variants: {},

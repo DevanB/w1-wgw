@@ -1,10 +1,14 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Layout } from "../components/Layout"
 
 export default function IndexPage() {
   return (
     <Layout title="Home">
-      <div>
+      <div className="h-56">
+        <div className="fixed w-screen overflow-hidden -z-10">
+          <Image className="object-cover" src="/hero.jpg" layout="fill" />
+        </div>
         <small>A Baptiste affiliate yoga studio</small>
         <h1>Welcome to Warrior One Winter Garden-Windermere</h1>
         <h2>Now offering in-studio, outdoor, and online classes</h2>

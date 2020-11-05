@@ -12,8 +12,8 @@ export function Header() {
     <>
       <TopBanner />
       <header className="px-4 bg-brand-blue sm:px-6">
-        <div className="flex items-center justify-between py-6 mx-auto lg:justify-start lg:space-x-10 header-wrapper max-w-7xl">
-          <div className="lg:w-0 lg:flex-1">
+        <div className="flex items-center justify-between py-6 mx-auto md:justify-start md:space-x-10 header-wrapper max-w-7xl">
+          <div className="md:w-0 md:flex-1">
             <Link href="/">
               <a className="flex">
                 <Image
@@ -26,7 +26,7 @@ export function Header() {
               </a>
             </Link>
           </div>
-          <div className="-my-2 -mr-2 lg:hidden mobile-menu">
+          <div className="-my-2 -mr-2 md:hidden mobile-menu">
             <button
               onClick={() => setIsMenuOpen(true)}
               type="button"
@@ -48,7 +48,7 @@ export function Header() {
               </svg>
             </button>
           </div>
-          <nav className="hidden lg:flex space-x-10">
+          <nav className="hidden md:flex space-x-10">
             <div className="relative inline-block text-left">
               <Menu>
                 {({ open }) => (
