@@ -20,33 +20,63 @@ export default function IndexPage() {
         </Link>
       </div>
 
-      <div>
-        <h3>New to Yoga?</h3>
-        <p>
-          You do not need to stand on your head to be part of our studio! All
-          you need is an open mind.
-        </p>
-      </div>
-      <div>
-        <h3>Inside Our Studio</h3>
-        <p>
-          Yoga is always better with the company of some inspirational people
-          who keep you moving forward.
-        </p>
-      </div>
-      <div>
-        <h3>Our Classes</h3>
-        <p>
-          All of our classes follow the Baptist method that's summarized by its
-          five pillars: gaze, breath, core stabilization, heat, and flow.
-        </p>
-      </div>
-      <div>
-        <h3>Upcoming Events</h3>
-        <p>
-          Finding like-minded individuals is what keeps us together. Take a look
-          at our upcoming community events.
-        </p>
+      <div className="text-gray-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-orange">
+          <h3 className="text-3xl">New to Yoga?</h3>
+          <p className="text-base tracking-tight">
+            You do not need to stand on your head to be part of our studio! All
+            you need is an open mind.
+          </p>
+          <div className="flex">
+            <Link href="/new-to-yoga">
+              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                Learn More
+              </a>
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-red">
+          <h3 className="text-3xl">Inside Our Studio</h3>
+          <p className="text-base tracking-tight">
+            Yoga is always better with the company of some inspirational people
+            who keep you moving forward.
+          </p>
+          <div className="flex">
+            <Link href="/our-studio">
+              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                See the Space
+              </a>
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-orange sm:order-4 lg:order-3">
+          <h3 className="text-3xl">Our Classes</h3>
+          <p className="text-base tracking-tight">
+            All of our classes follow the Baptist method that's summarized by
+            its five pillars: gaze, breath, core stabilization, heat, and flow.
+          </p>
+          <div className="flex">
+            <Link href="/class-descriptions">
+              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                View Our Classes
+              </a>
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-red sm:order-3 lg:order-4">
+          <h3 className="text-3xl">Upcoming Events</h3>
+          <p className="text-base tracking-tight">
+            Finding like-minded individuals is what keeps us together. Take a
+            look at our upcoming community events.
+          </p>
+          <div className="flex">
+            <Link href="/events">
+              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                View the Calendar
+              </a>
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div>
