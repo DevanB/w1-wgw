@@ -1,77 +1,118 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Layout } from "../components/Layout"
+import { Header } from "../components/Header"
+import { TopBanner } from "../components/TopBanner"
+import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel"
+import "pure-react-carousel/dist/react-carousel.es.css"
+import GoogleMapReact from "google-map-react"
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>
 
 export default function IndexPage() {
   return (
-    <Layout title="Home">
-      <div className="h-56">
-        <div className="fixed w-screen overflow-hidden -z-10">
-          <Image className="object-cover" src="/hero.jpg" layout="fill" />
+    <Layout title="Home" noHeader>
+      <TopBanner />
+      {/*<Image
+            src="/hero.jpg"
+            layout="responsive"
+            objectFit="contain"
+            objectPosition="bottom right"
+            height={1330}
+            width={2000}
+            />*/}
+      <div
+        className="h-full bg-center bg-cover"
+        style={{
+          backgroundImage: `url("/hero.jpg"), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <div className="mx-auto max-w-7xl">
+          <Header noBackground />
+          <div className="px-4 pb-16 text-gray-100 sm:px-6 sm:pt-8 md:py-24 lg:pb-48">
+            <small className="text-xs">A Baptiste Affiliate Yoga Studio</small>
+            <div className="space-y-3 sm:space-y-6 md:space-y-8">
+              <h1 className="text-3xl leading-9 md:max-w-lg md:text-4xl">
+                Welcome to Warrior One <br className="hidden sm:block" />
+                Winter Garden-Windermere
+              </h1>
+              <h2 className="max-w-xs text-base leading-tight sm:max-w-none">
+                Now offering in-studio, outdoor, and online classes
+              </h2>
+              <div className="flex flex-col pt-4 sm:flex-row space-y-3 row sm:space-y-0 sm:space-x-2">
+                <div className="flex">
+                  <Link href="/new-student-special">
+                    <a className="px-4 py-2 font-medium text-center text-gray-200 rounded bg-brand-red hover:bg-gray-100 hover:border-gray-100 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                      New Student Special
+                    </a>
+                  </Link>
+                </div>
+                <div className="flex">
+                  <Link href="/class-scheduel">
+                    <a className="px-4 py-2 font-medium text-center text-gray-900 rounded bg-brand-orange hover:bg-orange-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                      Book A Class
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <small>A Baptiste affiliate yoga studio</small>
-        <h1>Welcome to Warrior One Winter Garden-Windermere</h1>
-        <h2>Now offering in-studio, outdoor, and online classes</h2>
-        <Link href="/class-schedule">
-          <a>Book a class</a>
-        </Link>
-        <Link href="/new-student-special">
-          <a>New student special</a>
-        </Link>
       </div>
 
       <div className="text-gray-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-orange">
-          <h3 className="text-3xl">New to Yoga?</h3>
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-orange">
+          <h3 className="text-2xl md:text-3xl">New to Yoga?</h3>
           <p className="text-base tracking-tight">
             You do not need to stand on your head to be part of our studio! All
             you need is an open mind.
           </p>
           <div className="flex">
             <Link href="/new-to-yoga">
-              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="px-4 py-2 text-base font-medium text-center border-2 border-gray-900 rounded sm:mt-2 hover:bg-gray-100 hover:border-gray-100 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                 Learn More
               </a>
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-red">
-          <h3 className="text-3xl">Inside Our Studio</h3>
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-red">
+          <h3 className="text-2xl md:text-3xl">Inside Our Studio</h3>
           <p className="text-base tracking-tight">
             Yoga is always better with the company of some inspirational people
             who keep you moving forward.
           </p>
           <div className="flex">
             <Link href="/our-studio">
-              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="px-4 py-2 text-base font-medium text-center border-2 border-gray-900 rounded sm:mt-2 hover:bg-gray-100 hover:border-gray-100 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                 See the Space
               </a>
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-orange sm:order-4 lg:order-3">
-          <h3 className="text-3xl">Our Classes</h3>
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-orange sm:order-4 lg:order-3">
+          <h3 className="text-2xl md:text-3xl">Our Classes</h3>
           <p className="text-base tracking-tight">
             All of our classes follow the Baptist method that's summarized by
             its five pillars: gaze, breath, core stabilization, heat, and flow.
           </p>
           <div className="flex">
             <Link href="/class-descriptions">
-              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="px-4 py-2 text-base font-medium text-center border-2 border-gray-900 rounded sm:mt-2 hover:bg-gray-100 hover:border-gray-100 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                 View Our Classes
               </a>
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 space-y-4 bg-brand-red sm:order-3 lg:order-4">
-          <h3 className="text-3xl">Upcoming Events</h3>
+        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-red sm:order-3 lg:order-4">
+          <h3 className="text-2xl md:text-3xl">Upcoming Events</h3>
           <p className="text-base tracking-tight">
             Finding like-minded individuals is what keeps us together. Take a
             look at our upcoming community events.
           </p>
           <div className="flex">
             <Link href="/events">
-              <a className="px-4 py-2 font-medium text-center border-2 border-gray-900 rounded hover:bg-white hover:border-white focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="px-4 py-2 text-base font-medium text-center border-2 border-gray-900 rounded sm:mt-2 hover:bg-gray-100 hover:border-gray-100 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                 View the Calendar
               </a>
             </Link>
@@ -79,22 +120,79 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div>
-        <small>Google, Facebook, Yelp Reviews</small>
-        <h2>Testimonials</h2>
+      <div className="px-10 py-16 bg-brand-blue">
+        <div className="mx-auto text-gray-100 h-80 max-w-7xl space-y-2">
+          <small className="text-xs">Google, Facebook, Yelp Reviews</small>
+          <h2 className="text-2xl md:text-3xl">Testimonials</h2>
+          <div className="block sm:hidden">
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={125}
+              totalSlides={3}
+              visibleSlides={1}
+            >
+              <Slider>
+                <Slide index={0}>I am the first Slide.</Slide>
+                <Slide index={1}>I am the second Slide.</Slide>
+                <Slide index={2}>I am the third Slide.</Slide>
+              </Slider>
+              <DotGroup />
+            </CarouselProvider>
+          </div>
+          <div className="hidden sm:block md:hidden">
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={125}
+              totalSlides={3}
+              visibleSlides={2}
+            >
+              <Slider>
+                <Slide index={0}>I am the first Slide.</Slide>
+                <Slide index={1}>I am the second Slide.</Slide>
+                <Slide index={2}>I am the third Slide.</Slide>
+                <Slide index={3}>I am the fourth Slide.</Slide>
+              </Slider>
+              <DotGroup />
+            </CarouselProvider>
+          </div>
+          <div className="hidden sm:hidden md:block">
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={125}
+              totalSlides={3}
+              visibleSlides={3}
+            >
+              <Slider>
+                <Slide index={0}>I am the first Slide.</Slide>
+                <Slide index={1}>I am the second Slide.</Slide>
+                <Slide index={2}>I am the third Slide.</Slide>
+                <Slide index={3}>I am the fourth Slide.</Slide>
+                <Slide index={4}>I am the fifth Slide.</Slide>
+                <Slide index={5}>I am the sixth Slide.</Slide>
+              </Slider>
+              <DotGroup />
+            </CarouselProvider>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <small>Instructors</small>
-        <h2>Meet Our Talented Instructors</h2>
+      <div className="px-10 py-16">
+        <div className="mx-auto h-80 max-w-7xl space-y-2">
+          <small className="text-xs">Instructors</small>
+          <h2 className="text-2xl md:text-3xl">
+            Meet Our Talented Instructors
+          </h2>
+        </div>
       </div>
 
-      <div>
-        <h2>Class Packages</h2>
-        <p>Purchase now to save on yoga classes</p>
-        <Link href="/pricing">
-          <a>Check them out</a>
-        </Link>
+      <div className="h-40 py-12 bg-brand-red">
+        <div className="min-h-full mx-auto text-gray-100 max-w-7xl">
+          <h2 className="text-4xl">Class Packages</h2>
+          <p>Purchase now to save on yoga classes</p>
+          <Link href="/pricing">
+            <a>Check them out</a>
+          </Link>
+        </div>
       </div>
 
       <div>
@@ -112,12 +210,28 @@ export default function IndexPage() {
         </a>
       </div>
 
-      <div>
-        <small>Events, Trainings, Workshops & Challenges</small>
-        <h2>What's Coming Up...</h2>
-        <Link href="/events">
-          <a>More events</a>
-        </Link>
+      <div className="py-12 h-90 bg-brand-blue">
+        <div className="flex min-h-full mx-auto max-w-7xl lg:flex-row">
+          <div className="text-gray-100">
+            <small className="text-xs">
+              Events, Trainings, Workshops & Challenges
+            </small>
+            <h2 className="text-3xl lg:text-4xl">What's Coming Up...</h2>
+            <Link href="/events">
+              <a>More Events</a>
+            </Link>
+          </div>
+          <div className="flex">
+            <Image
+              src="/hero.jpg"
+              layout="responsive"
+              objectFit="contain"
+              objectPosition="bottom right"
+              height={1330}
+              width={2000}
+            />
+          </div>
+        </div>
       </div>
 
       <div className="contact-us">
@@ -175,9 +289,20 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div>
-        <p>Map</p>
+      <div className="h-96">
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyDZemqSWwhOwkUnP22GfdJmw50tvPzAllc" }}
+          defaultCenter={{
+            lat: 28.478872,
+            lng: -81.591729,
+          }}
+          defaultZoom={17}
+        >
+          <AnyReactComponent text="My Marker" />
+        </GoogleMapReact>
       </div>
     </Layout>
   )
 }
+
+//AIzaSyDWCA_3_2CKhqcGOb_nS3PG9giXerNxkzs

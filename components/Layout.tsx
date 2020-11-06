@@ -2,19 +2,31 @@ import { FunctionComponent } from "react"
 import { Footer } from "./Footer"
 import { Header } from "./Header"
 import { SEO, SEOProps } from "./SEO"
-import config from "../config"
+import { TopBanner } from "./TopBanner"
 
-export const Layout: FunctionComponent<SEOProps> = ({
+type LayoutProps = {
+  noHeader: boolean
+} & SEOProps
+
+export const Layout: FunctionComponent<LayoutProps> = ({
   children,
   description,
+  noHeader,
   title,
 }) => {
   return (
-    <>
+    <div className="">
       <SEO title={title} description={description} />
-      <Header />
-      <main>{children}</main>
+      {noHeader ? (
+        <>{children}</>
+      ) : (
+        <>
+          <TopBanner />
+          <Header />
+          <main>{children}</main>
+        </>
+      )}
       <Footer />
-    </>
+    </div>
   )
 }
