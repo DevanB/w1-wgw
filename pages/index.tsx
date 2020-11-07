@@ -13,14 +13,6 @@ export default function IndexPage() {
   return (
     <Layout title="Home" noHeader>
       <TopBanner />
-      {/*<Image
-            src="/hero.jpg"
-            layout="responsive"
-            objectFit="contain"
-            objectPosition="bottom right"
-            height={1330}
-            width={2000}
-            />*/}
       <div
         className="h-full bg-center bg-cover"
         style={{
@@ -195,19 +187,55 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div>
-        <img src="" />
-        <h2>Download Our App</h2>
-        <p>
-          Find and book your favorite yoga classes from anywhere with our yoga
-          app.
-        </p>
-        <a href="#">
-          <img src="" alt="Download on the App Store" />
-        </a>
-        <a href="#">
-          <img src="" alt="Get it on Google Play" />
-        </a>
+      <div className="pt-12 h-90">
+        <div className="flex flex-col-reverse items-center min-h-full px-4 mx-auto sm:px-6 max-w-7xl md:flex-row">
+          <div className="flex flex-1 mt-8 lg:ml-12">
+            <Image src="/mindBodyApp.webp" alt="" height={468} width={455} />
+          </div>
+          <div className="flex flex-col items-center justify-center flex-1 text-center text-gray-900 md:items-start md:text-left space-y-4">
+            <h2 className="text-3xl lg:text-4xl">Download Our App</h2>
+            <div className="flex m-w-3/4">
+              <a
+                target="_blank"
+                rel="nofollow noreferrer"
+                href="http://get.mndbdy.ly/OU6zrTWdIS"
+                className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-black border border-transparent bg-brand-orange rounded-md leading-6 hover:bg-orange-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+              >
+                Get MINDBODY
+              </a>
+            </div>
+            <p className="text-base">
+              Find and book your favorite yoga classes from anywhere with our
+              yoga app.
+            </p>
+            <div className="flex flex-row items-center space-y-0 space-x-2">
+              <a
+                target="_blank"
+                rel="nofollow noreferrer"
+                href="http://get.mndbdy.ly/OU6zrTWdIS"
+              >
+                <Image
+                  src="/downloadiOSAppStoreDark.svg"
+                  alt="Download MINDBODY on the Apple App Store"
+                  height={50}
+                  width={150}
+                />
+              </a>
+              <a
+                target="_blank"
+                rel="nofollow noreferrer"
+                href="http://get.mndbdy.ly/OU6zrTWdIS"
+              >
+                <Image
+                  src="/downloadGooglePlayStoreDark.svg"
+                  alt="Download MINDBODY on the Google Play Store"
+                  height={70}
+                  width={170}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="py-12 h-90 bg-brand-blue">
