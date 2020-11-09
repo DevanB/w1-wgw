@@ -10,9 +10,9 @@ module.exports = {
   purge: ["./components/**/*.{ts,tsx}", "./pages/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-      },
+      backgroundImage: () => ({
+        "hero-pattern": "url('/temple.svg')",
+      }),
       colors: {
         "brand-orange": "#f7941d",
         "brand-red": "#ea4815",
@@ -29,6 +29,9 @@ module.exports = {
           "800": "#993f10",
           "900": "#7e3312",
         },
+      },
+      fontFamily: {
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         xxs: "15rem",

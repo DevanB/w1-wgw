@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@headlessui/react": "0.2.0",
+    "date-fns": "2.16.1",
     "framer-motion": "2.9.4",
     "google-map-react": "2.1.9",
     "graphql": "15.4.0",
