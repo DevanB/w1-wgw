@@ -6,7 +6,7 @@ import { TopBanner } from "../components/TopBanner"
 import GoogleMapReact from "google-map-react"
 import { graphQLClient, gql } from "../utils/graphql"
 
-export default function IndexPage({ instructors, testimonials }: any) {
+export default function IndexPage({ events, instructors, testimonials }: any) {
   return (
     <Layout title="Home" noHeader>
       <TopBanner />
@@ -131,7 +131,7 @@ export default function IndexPage({ instructors, testimonials }: any) {
               Testimonials
             </h2>
             <div className="flex flex-col overflow-x-auto sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0">
-              {testimonials.slice(0, 3).map(t => (
+              {testimonials.map(t => (
                 <blockquote
                   key={t.sys.id}
                   className="flex flex-col flex-none w-full px-12 py-12 bg-gray-100 rounded sm:pb-6 sm:flex-grow sm:max-w-sm"
@@ -184,29 +184,26 @@ export default function IndexPage({ instructors, testimonials }: any) {
           Meet Our Talented Instructors
         </h2>
         <div className="flex flex-row mb-4 overflow-x-auto space-x-8">
-          {instructors
-            .sort((a, b) => (a.order > b.order ? 1 : -1))
-            .slice(1, 6)
-            .map(i => (
-              <div className="flex-none w-64 h-auto pb-4" key={i.sys.id}>
-                <Link href={`/instructors/${i.slug}`}>
-                  <div className="cursor-pointer space-y-2">
-                    <Image
-                      src={i.image.url}
-                      height={i.image.height}
-                      width={i.image.width}
-                      alt={i.image.description}
-                    />
-                    <h3 className="font-serif text-xl text-gray-900">
-                      {i.firstName}
-                    </h3>
-                    <p className="text-base text-gray-900 truncate">
-                      {i.position}
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            ))}
+          {instructors.slice(1, 6).map(i => (
+            <div className="flex-none w-64 h-auto pb-4" key={i.sys.id}>
+              <Link href={`/instructors/${i.slug}`}>
+                <div className="cursor-pointer space-y-2">
+                  <Image
+                    src={i.image.url}
+                    height={i.image.height}
+                    width={i.image.width}
+                    alt={i.image.description}
+                  />
+                  <h3 className="font-serif text-xl text-gray-900">
+                    {i.firstName}
+                  </h3>
+                  <p className="text-base text-gray-900 truncate">
+                    {i.position}
+                  </p>
+                </div>
+              </Link>
+            </div>
+          ))}
           <div className="flex flex-col items-center justify-center flex-none w-64 group-hover:bg-gray-100 group transition ease-in-out h-80 duration-150">
             <Link href="/teacher-trainings">
               <div className="flex flex-col items-center justify-center space-y-2">
@@ -226,7 +223,7 @@ export default function IndexPage({ instructors, testimonials }: any) {
       </div>
 
       {/* ----- Class Packages ----- */}
-      <div className="px-4 py-16 sm:px-6 bg-gradient-to-r from-red-600 to-red-900">
+      {/*<div className="px-4 py-16 sm:px-6 bg-gradient-to-r from-red-600 to-red-900">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col space-y-4 ">
             <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
@@ -242,6 +239,46 @@ export default function IndexPage({ instructors, testimonials }: any) {
                 </a>
               </Link>
             </div>
+          </div>
+        </div>
+      </div>*/}
+
+      {/* ----- Events ----- */}
+      <div className="px-4 bg-brand-blue sm:px-6">
+        <div className="flex justify-between max-w-5xl mx-auto">
+          <div className="py-16">
+            <small className="text-xs tracking-wider text-gray-100">
+              Events, Trainings, Workshops & Challenges
+            </small>
+            <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
+              What's Coming Up...
+            </h2>
+            {events.map(e => (
+              <div key={e.sys.id}>
+                <Image
+                  src={e.image.url}
+                  width={e.image.width}
+                  height={e.image.height}
+                  alt=""
+                />
+                <span>
+                  {e.date} - {e.endDate}
+                </span>
+                <h3>{e.name}</h3>
+                <span>{e.cost}</span>
+                <span>{e.url}</span>
+                <p>{e.description}</p>
+                <Link href={`/events/${e.slug}`}>
+                  <a>Learn More</a>
+                </Link>
+              </div>
+            ))}
+            <Link href="/events">
+              <a className="text-gray-100">More Events</a>
+            </Link>
+          </div>
+          <div className="flex h-auto w-96">
+            <Image src="/events.jpg" height={512} width={341} />
           </div>
         </div>
       </div>
@@ -284,31 +321,6 @@ export default function IndexPage({ instructors, testimonials }: any) {
                 width={170}
               />
             </a>
-          </div>
-        </div>
-      </div>
-
-      {/* ----- Events ----- */}
-      <div className="py-12 h-90 bg-brand-blue">
-        <div className="flex min-h-full mx-auto max-w-7xl lg:flex-row">
-          <div className="text-gray-100">
-            <small className="text-xs">
-              Events, Trainings, Workshops & Challenges
-            </small>
-            <h2 className="text-3xl lg:text-4xl">What's Coming Up...</h2>
-            <Link href="/events">
-              <a>More Events</a>
-            </Link>
-          </div>
-          <div className="flex">
-            <Image
-              src="/hero.jpg"
-              layout="responsive"
-              objectFit="contain"
-              objectPosition="bottom right"
-              height={1330}
-              width={2000}
-            />
           </div>
         </div>
       </div>
@@ -387,8 +399,8 @@ export default function IndexPage({ instructors, testimonials }: any) {
 }
 
 const homePageQuery = gql`
-  {
-    instructorCollection {
+  query HomePageQuery($currentDate: DateTime!) {
+    instructorCollection(order: [order_ASC], limit: 6) {
       items {
         sys {
           id
@@ -406,7 +418,7 @@ const homePageQuery = gql`
         position
       }
     }
-    testimonialCollection {
+    testimonialCollection(limit: 3) {
       items {
         sys {
           id
@@ -417,17 +429,45 @@ const homePageQuery = gql`
         testimonial
       }
     }
+    eventCollection(
+      where: { endDate_gte: $currentDate }
+      order: [date_ASC]
+      limit: 3
+    ) {
+      items {
+        sys {
+          id
+        }
+        slug
+        image {
+          width
+          height
+          title
+          description
+          url
+        }
+        date
+        endDate
+        name
+        description
+        cost
+        url
+      }
+    }
   }
 `
 
 export async function getStaticProps() {
   try {
-    const homePage = await graphQLClient.request(homePageQuery)
+    const homePage = await graphQLClient.request(homePageQuery, {
+      currentDate: new Date(),
+    })
 
     return {
       props: {
         instructors: homePage.instructorCollection.items,
         testimonials: homePage.testimonialCollection.items,
+        events: homePage.eventCollection.items,
       },
     }
   } catch (err) {
