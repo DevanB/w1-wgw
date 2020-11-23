@@ -35,14 +35,14 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               <div className="flex flex-col pt-4 sm:flex-row space-y-3 row sm:space-y-0 sm:space-x-2">
                 <div className="flex">
                   <Link href="/new-student-special">
-                    <a className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-red hover:bg-orange-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                    <a className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-red hover:bg-orange-600 focus:outline-none focus:ring transition">
                       New Student Special
                     </a>
                   </Link>
                 </div>
                 <div className="flex">
                   <Link href="/class-scheduel">
-                    <a className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-orange hover:bg-orange-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                    <a className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-orange hover:bg-orange-600 focus:outline-none focus:ring transition">
                       Book A Class
                     </a>
                   </Link>
@@ -65,7 +65,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
           </p>
           <div className="flex">
             <Link href="/new-to-yoga">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
                 Learn More
               </a>
             </Link>
@@ -81,7 +81,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
           </p>
           <div className="flex">
             <Link href="/our-studio">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
                 See the Space
               </a>
             </Link>
@@ -97,7 +97,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
           </p>
           <div className="flex">
             <Link href="/class-descriptions">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
                 View Our Classes
               </a>
             </Link>
@@ -113,7 +113,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
           </p>
           <div className="flex">
             <Link href="/events">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
                 View the Calendar
               </a>
             </Link>
@@ -152,7 +152,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                   <footer className="mt-8">
                     <div className="flex items-center justify-between">
                       <Link href="/testimonials">
-                        <a className="text-base font-medium text-center text-gray-900 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                        <a className="text-base font-medium text-center text-gray-900 rounded focus:outline-none focus:ring transition">
                           Read More
                         </a>
                       </Link>
@@ -169,7 +169,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             </div>
             <div>
               <Link href="/testimonials">
-                <a className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                <a className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
                   View More Testimonials
                 </a>
               </Link>
@@ -194,6 +194,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                     height={i.image.height}
                     width={i.image.width}
                     alt={i.image.description}
+                    layout="intrinsic"
                   />
                   <h3 className="font-serif text-xl text-gray-900">
                     {i.firstName}
@@ -205,7 +206,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               </Link>
             </div>
           ))}
-          <div className="flex flex-col items-center justify-center flex-none w-64 group-hover:bg-gray-100 group transition ease-in-out h-80 duration-150">
+          <div className="flex flex-col items-center justify-center flex-none w-64 group-hover:bg-gray-100 group transition h-80">
             <Link href="/teacher-trainings">
               <div className="flex flex-col items-center justify-center space-y-2">
                 <h3 className="font-serif text-xl text-gray-900">You!</h3>
@@ -217,7 +218,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
           </div>
         </div>
         <Link href="/instructors">
-          <a className="px-4 py-2 text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+          <a className="px-4 py-2 text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
             View All Instructors
           </a>
         </Link>
@@ -250,55 +251,63 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
       {/* ----- Events ----- */}
       <div className="px-4 bg-brand-blue sm:px-6">
         <div className="flex justify-between mx-auto max-w-7xl">
-          <div className="py-16">
-            <small className="text-xs tracking-wider text-gray-100">
-              Events, Trainings, Workshops & Challenges
-            </small>
-            <div className="flex flex-col space-y-4">
-              <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
-                What's Coming Up...
-              </h2>
-              <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
-                {events.map(e => (
-                  <div key={e.sys.id}>
-                    <span className="text-base text-gray-100">{e.cost}</span>
-                    <Image
-                      src={e.image.url}
-                      width={e.image.width}
-                      height={e.image.height}
-                      alt=""
-                    />
-                    <span className="text-base text-gray-100">
-                      {e.date}
-                      <br />
-                      {isSameDay(new Date(e.date), new Date(e.endDate))
-                        ? `${format(new Date(e.date), "LLL do p")} - 
-                          ${format(new Date(e.endDate), "p")}`
-                        : `${format(new Date(e.date), "LLL do p")} -
-                        ${format(new Date(e.endDate), "LLL do p")}`}
-                    </span>
-                    <h3 className="text-base text-gray-100">{e.name}</h3>
-                    <p className="text-base text-gray-100">
-                      {e.description.slice(0, 140)}...
-                    </p>
-                    <div className="flex">
-                      <a href={e.url} className="text-base text-gray-100">
-                        Sign Up!
-                      </a>
-                      <Link href={`/events/${e.slug}`}>
-                        <a className="text-base text-gray-100">Learn More</a>
-                      </Link>
+          <div className="space-y-8">
+            <div className="flex flex-col flex-1 py-16">
+              <small className="text-xs tracking-wider text-gray-100">
+                Events, Trainings, Workshops & Challenges
+              </small>
+              <div className="flex flex-col space-y-4">
+                <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
+                  What's Coming Up...
+                </h2>
+                <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+                  {events.map(e => (
+                    <div key={e.sys.id}>
+                      <div className="relative">
+                        <Image
+                          src={e.image.url}
+                          width={e.image.width}
+                          height={e.image.height}
+                          alt=""
+                          layout="intrinsic"
+                        />
+                        <span className="absolute top-0 right-0 text-base text-gray-100">
+                          {e.cost}
+                        </span>
+                      </div>
+                      <span className="text-base text-gray-100">
+                        {e.date}
+                        <br />
+                        {isSameDay(new Date(e.date), new Date(e.endDate))
+                          ? `${format(new Date(e.date), "LLL do p")} - 
+                            ${format(new Date(e.endDate), "p")}`
+                          : `${format(new Date(e.date), "LLL do p")} -
+                          ${format(new Date(e.endDate), "LLL do p")}`}
+                      </span>
+                      <h3 className="text-base text-gray-100">{e.name}</h3>
+                      <p className="text-base text-gray-100">
+                        {e.description.slice(0, 140)}...
+                      </p>
+                      <div className="flex">
+                        <a href={e.url} className="text-base text-gray-100">
+                          Sign Up!
+                        </a>
+                        <Link href={`/events/${e.slug}`}>
+                          <a className="text-base text-gray-100">Learn More</a>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-              <Link href="/events">
-                <a className="text-gray-100">More Events</a>
-              </Link>
+              <div>
+                <Link href="/events">
+                  <a className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
+                    More Events
+                  </a>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="flex h-auto w-96">
-            <Image src="/events.jpg" height={512} width={341} />
           </div>
         </div>
       </div>
@@ -306,7 +315,13 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
       {/* ----- MINDBODY App ----- */}
       <div className="flex flex-col-reverse items-center max-w-6xl px-4 pt-12 mx-auto sm:px-6 md:flex-row">
         <div className="flex flex-1 mt-8 lg:ml-12">
-          <Image src="/mindBodyApp.webp" alt="" height={468} width={455} />
+          <Image
+            src="/mindBodyApp.jpg"
+            alt=""
+            height={468}
+            width={455}
+            layout="intrinsic"
+          />
         </div>
         <div className="flex flex-col items-center justify-center flex-1 text-center md:items-start md:text-left space-y-8">
           <h2 className="font-serif text-2xl text-gray-900 lg:text-3xl">
@@ -327,6 +342,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                 alt="Download MINDBODY on the Apple App Store"
                 height={50}
                 width={150}
+                layout="fixed"
               />
             </a>
             <a
@@ -339,6 +355,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                 alt="Download MINDBODY on the Google Play Store"
                 height={70}
                 width={170}
+                layout="fixed"
               />
             </a>
           </div>

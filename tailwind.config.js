@@ -1,12 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
-  future: {
-    defaultLineHeights: true,
-    purgeLayersByDefault: true,
-    removeDeprecatedGapUtilities: true,
-    standardFontWeights: true,
-  },
   purge: ["./components/**/*.{ts,tsx}", "./pages/**/*.{ts,tsx}"],
   theme: {
     extend: {
@@ -44,8 +38,8 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require("@tailwindcss/ui")({
-      layout: "sidebar",
-    }),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
   ],
 }

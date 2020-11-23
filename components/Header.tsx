@@ -27,7 +27,7 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
             <button
               onClick={() => setIsMenuOpen(true)}
               type="button"
-              className="inline-flex items-center justify-center p-2 text-gray-100 mobile-menu-item rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+              className="inline-flex items-center justify-center p-2 text-gray-100 mobile-menu-item rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition"
             >
               <svg
                 className="w-6 h-6"
@@ -53,11 +53,11 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                     <Menu.Button
                       className={`${
                         open ? "text-gray-300" : "text-gray-100"
-                      } inline-flex items-center text-base font-medium group space-x-2 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150`}
+                      } inline-flex items-center text-base font-medium group space-x-2 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition`}
                     >
                       <span>Classes</span>
                       <svg
-                        className="w-5 h-5 text-gray-100 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
+                        className="w-5 h-5 text-gray-100 group-hover:text-gray-300 group-focus:text-gray-300 transition"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -150,17 +150,17 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
             </div>
 
             <Link href="/events">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
                 Events
               </a>
             </Link>
             <Link href="/pricing">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
                 Pricing
               </a>
             </Link>
             <Link href="/teacher-trainings">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
                 Teacher Trainings
               </a>
             </Link>
@@ -171,11 +171,11 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                     <Menu.Button
                       className={`${
                         open ? "text-gray-300" : "text-gray-100"
-                      } inline-flex items-center text-base font-medium group space-x-2 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150`}
+                      } inline-flex items-center text-base font-medium group space-x-2 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition`}
                     >
                       <span>Community</span>
                       <svg
-                        className="w-5 text-gray-100 s-5 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
+                        className="w-5 text-gray-100 s-5 group-hover:text-gray-300 group-focus:text-gray-300 transition"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -251,17 +251,17 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
               </Menu>
             </div>
             <Link href="/about">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
                 About
               </a>
             </Link>
             <Link href="/faq">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
                 FAQ
               </a>
             </Link>
             <Link href="/contact">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
                 Contact
               </a>
             </Link>
@@ -278,7 +278,7 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
           >
             <div className="absolute inset-x-0 top-0 p-2 transition transform origin-top-right md:hidden">
               <div className="rounded-lg shadow-lg">
-                <div className="bg-gray-100 rounded-lg shadow-xs divide-y-2 divide-gray-50">
+                <div className="bg-gray-100 rounded-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
                   <div className="px-5 pt-5 pb-6 space-y-6">
                     <div className="flex items-center justify-between">
                       <div className="w-auto h-8">
@@ -293,7 +293,7 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                         <button
                           onClick={() => setIsMenuOpen(false)}
                           type="button"
-                          className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                          className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition"
                         >
                           <svg
                             className="w-6 h-6"
@@ -315,35 +315,35 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                     <div>
                       <nav className="grid gap-y-6">
                         <Link href="/class-schedule">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
                             <div className="text-base font-medium text-gray-900 leading-6">
                               Class Schedule
                             </div>
                           </a>
                         </Link>
                         <Link href="/class-descriptions">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
                             <div className="text-base font-medium text-gray-900 leading-6">
                               Class Descriptions
                             </div>
                           </a>
                         </Link>
                         <Link href="/new-student-special">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
                             <div className="text-base font-medium text-gray-900 leading-6">
                               New Student Special
                             </div>
                           </a>
                         </Link>
                         <Link href="/about">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
                             <div className="text-base font-medium text-gray-900 leading-6">
                               About
                             </div>
                           </a>
                         </Link>
                         <Link href="/contact">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
+                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
                             <div className="text-base font-medium text-gray-900 leading-6">
                               Contact
                             </div>
@@ -355,42 +355,42 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                   <div className="px-5 py-6 space-y-6">
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                       <Link href="/events">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           Events
                         </a>
                       </Link>
                       <Link href="/pricing">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           Pricing
                         </a>
                       </Link>
                       <Link href="/teacher-trainings">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           Teacher Training
                         </a>
                       </Link>
                       <Link href="/private-sessions">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           Private Sessions
                         </a>
                       </Link>
                       <Link href="/tr1be">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           Tr1be
                         </a>
                       </Link>
                       <Link href="/blog">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           Blog
                         </a>
                       </Link>
                       <Link href="/gallery">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           Gallery
                         </a>
                       </Link>
                       <Link href="/faq">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition ease-in-out duration-150">
+                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
                           FAQ
                         </a>
                       </Link>

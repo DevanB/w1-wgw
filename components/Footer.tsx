@@ -26,13 +26,13 @@ export function Footer() {
               type="email"
               id="emailAddress"
               required
-              className="w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-gray-100 border border-gray-300 appearance-none leading-6 rounded-md focus:outline-none focus:border-blue-300 focus:shadow-outline focus:placeholder-gray-400 transition duration-150 ease-in-out sm:max-w-xs"
+              className="w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-gray-100 border border-gray-300 appearance-none leading-6 rounded-md focus:outline-none focus:border-blue-300 focus:ring focus:placeholder-gray-400 transition sm:max-w-xs"
               placeholder="Enter your email address"
             />
             <div className="flex-shrink-0 rounded-md">
               <button
                 type="submit"
-                className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-black border border-transparent bg-brand-orange rounded-md leading-6 hover:bg-orange-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+                className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-black border border-transparent bg-brand-orange rounded-md leading-6 hover:bg-orange-600 focus:outline-none focus:ring transition"
               >
                 Subscribe
               </button>
