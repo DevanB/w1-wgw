@@ -1,8 +1,10 @@
-import { useState } from "react"
-import { graphQLClient, gql } from "../utils/graphql"
-import { Layout } from "../components/Layout"
 import { AnimatePresence, motion } from "framer-motion"
+import Link from "next/link"
+import { useState } from "react"
 import ReactMarkdown from "react-markdown"
+
+import { Layout } from "../components/Layout"
+import { graphQLClient, gql } from "../utils/graphql"
 
 const AccordionItem = (classType: any) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -99,6 +101,22 @@ export default function ClassDescriptionsPage({ classes }) {
               <AccordionItem key={classType.sys.id} {...classType} />
             ))}
         </dl>
+      </div>
+      <div className="px-4 py-10 sm:px-6 bg-gradient-to-r from-red-600 to-red-900">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between">
+            <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
+              Book A Class
+            </h2>
+            <div className="sm:flex">
+              <Link href="/class-schedule">
+                <a className="px-4 py-2 text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                  View Schedule
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   )
