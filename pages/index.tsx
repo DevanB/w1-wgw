@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
+import Link from "../components/Link"
 import { Layout } from "../components/Layout"
 import { Header } from "../components/Header"
 import { TopBanner } from "../components/TopBanner"
@@ -35,17 +35,19 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               </h2>
               <div className="flex flex-col pt-4 sm:flex-row space-y-3 row sm:space-y-0 sm:space-x-2">
                 <div className="flex">
-                  <Link href="/new-student-special">
-                    <a className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-red hover:bg-orange-600 focus:outline-none focus:ring transition">
-                      New Student Special
-                    </a>
+                  <Link
+                    href="/new-student-special"
+                    className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-red hover:bg-orange-600 focus:outline-none focus:ring transition"
+                  >
+                    New Student Special
                   </Link>
                 </div>
                 <div className="flex">
-                  <Link href="/class-scheduel">
-                    <a className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-orange hover:bg-orange-600 focus:outline-none focus:ring transition">
-                      Book A Class
-                    </a>
+                  <Link
+                    href="/class-schedule"
+                    className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-orange hover:bg-orange-600 focus:outline-none focus:ring transition"
+                  >
+                    Book A Class
                   </Link>
                 </div>
               </div>
@@ -65,10 +67,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             you need is an open mind.
           </p>
           <div className="flex">
-            <Link href="/new-to-yoga">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
-                Learn More About Yoga
-              </a>
+            <Link
+              arrow
+              href="/new-to-yoga"
+              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+            >
+              Learn More About Yoga
             </Link>
           </div>
         </div>
@@ -81,10 +85,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             who keep you moving forward.
           </p>
           <div className="flex">
-            <Link href="/our-studio">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
-                See the Space
-              </a>
+            <Link
+              arrow
+              href="/our-studio"
+              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+            >
+              See the Space
             </Link>
           </div>
         </div>
@@ -97,10 +103,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             its five pillars: gaze, breath, core stabilization, heat, and flow.
           </p>
           <div className="flex">
-            <Link href="/class-descriptions">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
-                View Our Classes
-              </a>
+            <Link
+              arrow
+              href="/class-descriptions"
+              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+            >
+              View Our Classes
             </Link>
           </div>
         </div>
@@ -113,10 +121,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             look at our upcoming community events.
           </p>
           <div className="flex">
-            <Link href="/events">
-              <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
-                View the Calendar
-              </a>
+            <Link
+              arrow
+              href="/events"
+              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+            >
+              View the Calendar
             </Link>
           </div>
         </div>
@@ -152,10 +162,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                   </div>
                   <footer className="mt-8">
                     <div className="flex items-center justify-between">
-                      <Link href="/testimonials">
-                        <a className="text-base font-medium text-center text-gray-900 rounded focus:outline-none focus:ring transition">
-                          Read Full Testimonial
-                        </a>
+                      <Link
+                        arrow
+                        href="/testimonials"
+                        className="text-base font-medium text-center text-gray-900 rounded focus:outline-none focus:ring transition"
+                      >
+                        Read Full Testimonial
                       </Link>
                       <span className="inline-flex items-center justify-center w-10 h-10 bg-gray-500 rounded-full">
                         <span className="font-medium leading-none text-white">
@@ -169,10 +181,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               ))}
             </div>
             <div>
-              <Link href="/testimonials">
-                <a className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
-                  View More Testimonials
-                </a>
+              <Link
+                arrow
+                href="/testimonials"
+                className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue focus:outline-none focus:ring transition"
+              >
+                View More Testimonials
               </Link>
             </div>
           </div>
@@ -218,11 +232,14 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             </Link>
           </div>
         </div>
-        <Link href="/instructors">
-          <a className="px-4 py-2 text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
+        <div className="flex">
+          <Link
+            href="/instructors"
+            className="px-4 py-2 text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition"
+          >
             View All Instructors
-          </a>
-        </Link>
+          </Link>
+        </div>
       </div>
 
       {/* ----- Class Packages ----- */}
@@ -307,10 +324,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                           {e.description.slice(0, 140)}...
                         </p>
                         <div className="flex">
-                          <Link href={`/events/${e.slug}`}>
-                            <a className="text-base text-brand-blue">
-                              Learn More About Event
-                            </a>
+                          <Link
+                            arrow
+                            href={`/events/${e.slug}`}
+                            className="text-base text-brand-blue"
+                          >
+                            Learn More About Event
                           </Link>
                         </div>
                       </div>
@@ -318,10 +337,12 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                   ))}
                 </div>
                 <div>
-                  <Link href="/events">
-                    <a className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
-                      More Events
-                    </a>
+                  <Link
+                    arrow
+                    href="/events"
+                    className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue focus:outline-none focus:ring transition"
+                  >
+                    More Events
                   </Link>
                 </div>
               </div>

@@ -4,10 +4,8 @@
 
 ### Index Page
 
-- [x] Contact Us grid on iPad
 - [ ] Map marker logo fix
 - [ ] Logo fix
-- [ ] Right arrow on links slide to right on hover
 
 ### Next Steps
 
@@ -43,7 +41,7 @@
 - [ ] Terms & Conditions (/terms)
 - [ ] COVID-19 Update (/health)
 - [x] Class Schedule (/class-schedule)
-- [ ] Class Descriptions (/class-descriptions)
+- [x] Class Descriptions (/class-descriptions)
 - [ ] Private Sessions (/private-sessions)
 - [ ] Events (/events)
 - [ ] Pricing (/pricing)

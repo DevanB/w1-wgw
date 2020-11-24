@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Link from "next/link"
 import { useEffect } from "react"
 import { Layout } from "../components/Layout"
@@ -7,12 +8,24 @@ export default function ClassSchedulePage() {
 
   useEffect(() => {
     return () => {
-      document.querySelector(".hc-pignose-calendar-wrapper").outerHTML = ""
+      const el1 = document.querySelector(".hc-pignose-calendar-wrapper")
+      if (el1) el1.outerHTML = ""
+      const el2 = document.querySelector(".hc-pignose-calendar-wrapper-overlay")
+      if (el2) el2.outerHTML = ""
+      const el3 = document.querySelector(".semantic-content")
+      if (el3) el3.outerHTML = ""
     }
   }, [])
 
   return (
     <>
+      <Head>
+        <script
+          src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
+          type="text/javascript"
+          async={true}
+        />
+      </Head>
       <Layout title={pageTitle}>
         <p className="px-4 my-8 text-base text-center text-gray-900 sm:px-6">
           If you are having issues with the schedule below, try registering{" "}

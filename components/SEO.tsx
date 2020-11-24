@@ -22,12 +22,6 @@ export function SEO({ description, title }: SEOProps) {
       <meta property="twitter:creator" content={config.social.twitter} />
       <meta property="twitter:title" content={metaTitle} />
       <meta property="twitter:description" content={metaDescription} />
-      <script
-        src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
-        type="text/javascript"
-        async={true}
-        defer={true}
-      />
     </Head>
   )
 }

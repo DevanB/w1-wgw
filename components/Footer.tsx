@@ -16,9 +16,9 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:order-2">
-          <h4 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase leading-5">
+          <h3 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase leading-5">
             Join our mailing list
-          </h4>
+          </h3>
           <form className="flex flex-col max-w-md space-y-2">
             <label htmlFor="emailAddress" className="sr-only">
               Email address
@@ -42,9 +42,9 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:order-1 md:justify-center">
-          <h4 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase bg-brand-blue leading-5">
+          <h3 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase bg-brand-blue leading-5">
             Stay Connected
-          </h4>
+          </h3>
           <div className="flex mt-3">
             <a
               target="_blank"
