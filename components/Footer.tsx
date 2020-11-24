@@ -87,12 +87,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col mb-6 text-center text-gray-100 md:order-4 md:col-span-full space-y-4">
-          <small>
+        <div className="flex flex-col mb-6 text-center md:order-4 md:col-span-full space-y-4">
+          <small className="text-gray-100 bg-brand-blue">
             Copyright © {new Date().getFullYear()} Warior One WGW. All Rights
             Reserved.
           </small>
-          <small>
+          <small className="text-gray-100 bg-brand-blue">
             <Link href="/privacy-notice">
               <a>Privacy Notice</a>
             </Link>{" "}
