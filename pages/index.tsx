@@ -67,7 +67,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
           <div className="flex">
             <Link href="/new-to-yoga">
               <a className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition">
-                Learn More
+                Learn More About Yoga
               </a>
             </Link>
           </div>
@@ -154,7 +154,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                     <div className="flex items-center justify-between">
                       <Link href="/testimonials">
                         <a className="text-base font-medium text-center text-gray-900 rounded focus:outline-none focus:ring transition">
-                          Read More
+                          Read Full Testimonial
                         </a>
                       </Link>
                       <span className="inline-flex items-center justify-center w-10 h-10 bg-gray-500 rounded-full">
@@ -309,7 +309,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                         <div className="flex">
                           <Link href={`/events/${e.slug}`}>
                             <a className="text-base text-brand-blue">
-                              Learn More
+                              Learn More About Event
                             </a>
                           </Link>
                         </div>
