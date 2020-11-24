@@ -371,6 +371,9 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                 width={150}
                 layout="fixed"
               />
+              <span className="sr-only">
+                Download MINDBODY on the Apple App Store
+              </span>
             </a>
             <a
               target="_blank"
@@ -384,6 +387,9 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                 width={170}
                 layout="fixed"
               />
+              <span className="sr-only">
+                Download MINDBODY on the Google Play Store
+              </span>
             </a>
           </div>
         </div>
