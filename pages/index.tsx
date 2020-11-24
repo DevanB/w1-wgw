@@ -5,7 +5,8 @@ import { Header } from "../components/Header"
 import { TopBanner } from "../components/TopBanner"
 import GoogleMapReact from "google-map-react"
 import { graphQLClient, gql } from "../utils/graphql"
-import { format, isSameDay } from "date-fns"
+import { isSameDay } from "date-fns"
+import { format } from "date-fns-tz"
 
 export default function IndexPage({ events, instructors, testimonials }: any) {
   return (
@@ -55,7 +56,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
 
       {/* ----- Highlights ----- */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-orange">
+        <div className="flex flex-col justify-center min-h-full px-5 py-6 sm:px-10 sm:py-12 sm:h-80 space-y-4 bg-hero-moroccan bg-brand-orange">
           <h3 className="font-serif text-2xl text-gray-900 md:text-3xl">
             New to Yoga?
           </h3>
@@ -71,7 +72,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-red">
+        <div className="flex flex-col justify-center min-h-full px-5 py-6 sm:px-10 sm:py-12 sm:h-80 space-y-4 bg-hero-moroccan-red bg-brand-red">
           <h3 className="font-serif text-2xl text-gray-900 md:text-3xl">
             Inside Our Studio
           </h3>
@@ -87,7 +88,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-orange sm:order-4 lg:order-3">
+        <div className="flex flex-col justify-center min-h-full px-5 py-6 sm:px-10 sm:py-12 sm:h-80 space-y-4 bg-hero-moroccan bg-brand-orange sm:order-4 lg:order-3">
           <h3 className="font-serif text-2xl text-gray-900 md:text-3xl">
             Our Classes
           </h3>
@@ -103,7 +104,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-center min-h-full px-10 py-12 h-80 space-y-4 bg-brand-red sm:order-3 lg:order-4">
+        <div className="flex flex-col justify-center min-h-full px-5 py-6 sm:px-10 sm:py-12 sm:h-80 space-y-4 bg-hero-moroccan-red bg-brand-red sm:order-3 lg:order-4">
           <h3 className="font-serif text-2xl text-gray-900 md:text-3xl">
             Upcoming Events
           </h3>
@@ -122,7 +123,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
       </div>
 
       {/* ----- Testimonials ----- */}
-      <div className="py-16 bg-brand-blue">
+      <div className="py-8 sm:py-16 bg-brand-blue">
         <div className="px-4 mx-auto sm:px-6 max-w-7xl">
           <small className="text-xs tracking-wider text-gray-100">
             Google, Facebook, Yelp Reviews
@@ -179,7 +180,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
       </div>
 
       {/* ----- Instructors ----- */}
-      <div className="px-4 py-16 mx-auto sm:px-6 max-w-7xl">
+      <div className="px-4 py-8 mx-auto sm:py-16 sm:px-6 max-w-7xl">
         <small className="text-xs tracking-wider uppercase">Instructors</small>
         <h2 className="mb-4 font-serif text-2xl md:text-3xl">
           Meet Our Talented Instructors
@@ -227,22 +228,24 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
       {/* ----- Class Packages ----- */}
       <div className="px-4 py-16 sm:px-6 bg-gradient-to-r from-red-600 to-red-900">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col space-y-4 ">
+          <div className="flex flex-col space-y-4">
             <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
               Fall Class Pack Special
             </h2>
-            <p className="text-base text-gray-100">
-              20 Classes for $149 ($7.45 each)
-              <br />
-              No expiration. Shareable or use them all for yourself!
-            </p>
-            <div className="sm:flex">
-              <a
-                href="https://warrioronewgw.brandbot-checkout.com/fall-special-20-class-pack-149-745-ea-UYm.html"
-                className="px-4 py-2 text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-              >
-                Purchase This Special!
-              </a>
+            <div className="space-y-10">
+              <p className="text-base text-gray-100">
+                20 Classes for $149 ($7.45 each)
+                <br />
+                No expiration. Shareable or use them all for yourself!
+              </p>
+              <div className="sm:flex">
+                <a
+                  href="https://warrioronewgw.brandbot-checkout.com/fall-special-20-class-pack-149-745-ea-UYm.html"
+                  className="px-4 py-2 text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+                >
+                  Purchase This Special!
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -250,64 +253,88 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
 
       {/* ----- Events ----- */}
       <div className="px-4 bg-brand-blue sm:px-6">
-        <div className="flex justify-between mx-auto max-w-7xl">
-          <div className="space-y-8">
-            <div className="flex flex-col flex-1 py-16">
+        <div className="flex mx-auto max-w-7xl space-x-16">
+          <div className="max-w-full space-y-8">
+            <div className="flex flex-col py-8 sm:py-16">
               <small className="text-xs tracking-wider text-gray-100">
                 Events, Trainings, Workshops & Challenges
               </small>
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-8">
                 <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
                   What's Coming Up...
                 </h2>
-                <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+                <div className="flex flex-row mb-4 overflow-x-auto space-x-8">
                   {events.map(e => (
-                    <div key={e.sys.id}>
+                    <div
+                      key={e.sys.id}
+                      className="flex flex-col flex-none pb-6 bg-gray-100 rounded-md w-72 sm:w-80 md:w-96 lg:w-80"
+                    >
                       <div className="relative">
-                        <Image
-                          src={e.image.url}
-                          width={e.image.width}
-                          height={e.image.height}
-                          alt=""
-                          layout="intrinsic"
-                        />
-                        <span className="absolute top-0 right-0 text-base text-gray-100">
+                        <div className="h-auto">
+                          <Image
+                            className="rounded-t-md"
+                            src={e.image.url}
+                            width={e.image.width}
+                            height={e.image.height}
+                            alt=""
+                            layout="responsive"
+                          />
+                        </div>
+                        <span className="absolute flex items-center justify-center px-2 py-1 text-base bg-gray-100 rounded-full text-brand-blue top-2 right-3">
                           {e.cost}
                         </span>
                       </div>
                       <span className="text-base text-gray-100">
-                        {e.date}
-                        <br />
                         {isSameDay(new Date(e.date), new Date(e.endDate))
-                          ? `${format(new Date(e.date), "LLL do p")} - 
-                            ${format(new Date(e.endDate), "p")}`
-                          : `${format(new Date(e.date), "LLL do p")} -
-                          ${format(new Date(e.endDate), "LLL do p")}`}
+                          ? `${format(new Date(e.date), "LLL do h:m", {
+                              timeZone: "America/New_York",
+                            })} - ${format(new Date(e.endDate), "p", {
+                              timeZone: "America/New_York",
+                            })}
+                            `
+                          : `${format(new Date(e.date), "LLL do p", {
+                              timeZone: "America/New_York",
+                            })} - ${format(new Date(e.endDate), "LLL do p", {
+                              timeZone: "America/New_York",
+                            })}
+                      `}
                       </span>
-                      <h3 className="text-base text-gray-100">{e.name}</h3>
-                      <p className="text-base text-gray-100">
-                        {e.description.slice(0, 140)}...
-                      </p>
-                      <div className="flex">
-                        <a href={e.url} className="text-base text-gray-100">
-                          Sign Up!
-                        </a>
-                        <Link href={`/events/${e.slug}`}>
-                          <a className="text-base text-gray-100">Learn More</a>
-                        </Link>
+                      <div className="flex flex-col justify-between h-full px-4 space-y-6">
+                        <h3 className="font-serif text-xl font-medium text-brand-blue">
+                          {e.name}
+                        </h3>
+                        <p className="text-base text-gray-900">
+                          {e.description.slice(0, 140)}...
+                        </p>
+                        <div className="flex">
+                          <Link href={`/events/${e.slug}`}>
+                            <a className="text-base text-brand-blue">
+                              Learn More
+                            </a>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
-              <div>
-                <Link href="/events">
-                  <a className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
-                    More Events
-                  </a>
-                </Link>
+                <div>
+                  <Link href="/events">
+                    <a className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue hover:bg-blue-900 focus:outline-none focus:ring transition">
+                      More Events
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
+          </div>
+          <div className="items-center hidden xl:flex">
+            <Image
+              src="/events.jpg"
+              width={683}
+              height={1024}
+              alt=""
+              layout="intrinsic"
+            />
           </div>
         </div>
       </div>
@@ -323,7 +350,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             layout="intrinsic"
           />
         </div>
-        <div className="flex flex-col items-center justify-center flex-1 text-center md:items-start md:text-left space-y-8">
+        <div className="flex flex-col items-center justify-center flex-1 text-center md:items-start md:text-left space-y-8 sm:ml-6">
           <h2 className="font-serif text-2xl text-gray-900 lg:text-3xl">
             Download Our App
           </h2>
@@ -364,7 +391,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
 
       {/* ----- Contact Us ----- */}
       <div className="px-4 bg-brand-blue sm:px-6">
-        <div className="flex justify-between max-w-5xl py-16 mx-auto">
+        <div className="flex flex-col justify-between max-w-5xl py-8 mx-auto sm:py-16 lg:flex-row">
           <div>
             <small className="text-xs tracking-wider text-gray-100 uppercase">
               Have a question?

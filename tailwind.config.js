@@ -4,9 +4,6 @@ module.exports = {
   purge: ["./components/**/*.{ts,tsx}", "./pages/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: () => ({
-        "hero-pattern": "url('/temple.svg')",
-      }),
       colors: {
         "brand-orange": "#f7941d",
         "brand-red": "#ea4815",
@@ -41,5 +38,19 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
+    require("tailwind-heropatterns")({
+      variants: [],
+
+      patterns: ["moroccan"],
+
+      colors: {
+        default: "#da6a05",
+        red: "rgb(185, 28, 28)",
+      },
+
+      opacity: {
+        default: 0.1,
+      },
+    }),
   ],
 }
