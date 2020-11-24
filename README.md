@@ -30,6 +30,7 @@
 ## Nice to Haves
 
 - [ ] Class Packages image on home page
+- [ ] Add lint-staging checks
 
 ## Pages
 
