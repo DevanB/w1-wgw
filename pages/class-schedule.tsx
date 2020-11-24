@@ -1,9 +1,16 @@
 import Link from "next/link"
-import { Layout } from "../components/Layout"
 import Head from "next/head"
+import { useEffect } from "react"
+import { Layout } from "../components/Layout"
 
 export default function ClassSchedulePage() {
   const pageTitle = "Class Schedule"
+
+  useEffect(() => {
+    return () => {
+      document.querySelector(".hc-pignose-calendar-wrapper").outerHTML = ""
+    }
+  }, [])
 
   return (
     <>
@@ -12,7 +19,7 @@ export default function ClassSchedulePage() {
           src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
           type="text/javascript"
           async={true}
-        ></script>
+        />
       </Head>
       <Layout title={pageTitle}>
         <p className="px-4 my-8 text-base text-center text-gray-900 sm:px-6">
