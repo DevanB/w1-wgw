@@ -41,7 +41,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:order-1 md:justify-center">
-          <h4 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase leading-5">
+          <h4 className="text-sm font-semibold tracking-wider text-center text-gray-100 uppercase bg-brand-blue leading-5">
             Stay Connected
           </h4>
           <div className="flex mt-3">
