@@ -25,7 +25,7 @@ export const Layout: FunctionComponent<LayoutProps> = ({
           <Header />
           <main>
             <div className="bg-gray-100">
-              <h1 className="py-12 font-serif text-4xl text-center text-brand-blue">
+              <h1 className="py-12 font-serif text-3xl text-center md:text-4xl text-brand-blue">
                 {title}
               </h1>
             </div>

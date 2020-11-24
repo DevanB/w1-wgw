@@ -162,7 +162,7 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
             </Link>
             <Link href="/teacher-trainings">
               <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
-                Teacher Trainings
+                Teacher Training
               </a>
             </Link>
             <div className="relative inline-block text-left">

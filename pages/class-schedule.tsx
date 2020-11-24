@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Head from "next/head"
 import { useEffect } from "react"
 import { Layout } from "../components/Layout"
 
@@ -14,13 +13,6 @@ export default function ClassSchedulePage() {
 
   return (
     <>
-      <Head>
-        <script
-          src="https://widgets.mindbodyonline.com/javascripts/healcode.js"
-          type="text/javascript"
-          async={true}
-        />
-      </Head>
       <Layout title={pageTitle}>
         <p className="px-4 my-8 text-base text-center text-gray-900 sm:px-6">
           If you are having issues with the schedule below, try registering{" "}
