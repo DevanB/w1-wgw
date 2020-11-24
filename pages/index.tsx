@@ -267,7 +267,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                   {events.map(e => (
                     <div
                       key={e.sys.id}
-                      className="flex flex-col flex-none pb-6 bg-gray-100 rounded-md w-72 sm:w-80 md:w-96 lg:w-80"
+                      className="flex flex-col flex-none pb-6 mb-4 bg-gray-100 rounded-md w-72 sm:w-80 md:w-96 lg:w-80"
                     >
                       <div className="relative">
                         <div className="h-auto">
@@ -391,35 +391,55 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
 
       {/* ----- Contact Us ----- */}
       <div className="px-4 bg-brand-blue sm:px-6">
-        <div className="flex flex-col justify-between max-w-5xl py-8 mx-auto sm:py-16 lg:flex-row">
+        <div className="flex flex-col justify-between max-w-5xl py-8 mx-auto sm:py-16 lg:flex-row space-y-8">
           <div>
             <small className="text-xs tracking-wider text-gray-100 uppercase">
               Have a question?
             </small>
-            <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
-              Contact Us
-            </h2>
-            <p className="text-base text-gray-100">
-              Feel free to send us any questions you may have. We are happy to
-              answer them.
-            </p>
-            <form>
-              <div>
-                <label htmlFor="name">Name*</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div>
-                <label htmlFor="email">Email*</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div>
-                <label htmlFor="message">Message*</label>
-                <textarea id="message" name="message" required />
-              </div>
-              <div>
-                <input type="submit" value="Submit" />
-              </div>
-            </form>
+            <div className="space-y-6">
+              <h2 className="font-serif text-2xl text-gray-100 md:text-3xl">
+                Contact Us
+              </h2>
+              <p className="text-base text-gray-100">
+                Feel free to send us any questions you may have. We are happy to
+                answer them.
+              </p>
+              <form className="space-y-4">
+                <label className="block">
+                  <span className="text-gray-100">Name*</span>
+                  <input
+                    type="text"
+                    className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    placeholder="John Doe"
+                    required
+                  />
+                </label>
+                <label className="block">
+                  <span className="text-gray-100">Email Address*</span>
+                  <input
+                    type="email"
+                    className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    placeholder="john.doe@example.com"
+                    required
+                  />
+                </label>
+                <label className="block">
+                  <span className="text-gray-100">Message*</span>
+                  <textarea
+                    className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    rows={3}
+                    required
+                  />
+                </label>
+                <div className="py-2 sm:py-4">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded cursor-pointer bg-brand-orange hover:bg-orange-600 focus:outline-none focus:shadow-outline transition"
+                  />
+                </div>
+              </form>
+            </div>
           </div>
           <div className="space-y-8">
             <div className="space-y-3">
@@ -439,7 +459,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               </div>
               <div>
                 <a
-                  className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-orange hover:bg-orange-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+                  className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-orange hover:bg-orange-600 focus:outline-none focus:shadow-outline transition"
                   href="#"
                 >
                   Get Directions
