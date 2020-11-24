@@ -5,7 +5,7 @@ import { SEO, SEOProps } from "./SEO"
 import { TopBanner } from "./TopBanner"
 
 type LayoutProps = {
-  noHeader: boolean
+  noHeader?: boolean
 } & SEOProps
 
 export const Layout: FunctionComponent<LayoutProps> = ({
@@ -23,7 +23,14 @@ export const Layout: FunctionComponent<LayoutProps> = ({
         <>
           <TopBanner />
           <Header />
-          <main>{children}</main>
+          <main>
+            <div className="bg-gray-100">
+              <h1 className="py-12 font-serif text-4xl text-center text-brand-blue">
+                {title}
+              </h1>
+            </div>
+            {children}
+          </main>
         </>
       )}
       <Footer />

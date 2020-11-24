@@ -16,9 +16,10 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
               <a className="flex">
                 <Image
                   src="/logo.svg"
-                  alt="Warrior One Winter Garden Windermere logo"
+                  alt="Warrior One logo"
                   width={100}
                   height={104}
+                  layout="intrinsic"
                 />
               </a>
             </Link>
@@ -88,7 +89,7 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                                       : "text-gray-700"
                                   } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
                                 >
-                                  Class Schedule
+                                  Schedule
                                 </a>
                               </Link>
                             )}
@@ -282,12 +283,17 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                   <div className="px-5 pt-5 pb-6 space-y-6">
                     <div className="flex items-center justify-between">
                       <div className="w-auto h-8">
-                        <Image
-                          src="/logo-inverted.svg"
-                          alt="Workflow"
-                          width={35}
-                          height={35}
-                        />
+                        <Link href="/">
+                          <a>
+                            <Image
+                              src="/logo-inverted.svg"
+                              alt="Warrior One logo"
+                              width={35}
+                              height={35}
+                              layout="intrinsic"
+                            />
+                          </a>
+                        </Link>
                       </div>
                       <div className="-mr-2">
                         <button

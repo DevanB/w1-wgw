@@ -11,6 +11,7 @@ export function Footer() {
             alt="Baptist Power Vinyasa Flow Yoga logo"
             width={250}
             height={109}
+            layout="intrinsic"
           />
         </div>
 

@@ -4,8 +4,9 @@
 
 ### Index Page
 
-- [ ] Contact Us grid on iPad
-- [ ] Map marker
+- [x] Contact Us grid on iPad
+- [ ] Map marker logo fix
+- [ ] Logo fix
 - [ ] Right arrow on links slide to right on hover
 
 ### Next Steps
@@ -17,7 +18,7 @@
 - [ ] Wiring up Contact Us form on home page
 - [ ] Wiring up mailing list on footer
 - [ ] Contact Us and mailing list form a11y
-- [ ] Class Schedule page
+- [x] Class Schedule page
 
 ## Technical To Do
 
@@ -40,7 +41,7 @@
 - [ ] Privacy Notice (/privacy)
 - [ ] Terms & Conditions (/terms)
 - [ ] COVID-19 Update (/health)
-- [ ] Class Schedule (/class-schedule)
+- [x] Class Schedule (/class-schedule)
 - [ ] Class Descriptions (/class-descriptions)
 - [ ] Private Sessions (/private-sessions)
 - [ ] Events (/events)
