@@ -36,10 +36,10 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               <div className="flex flex-col pt-4 sm:flex-row space-y-3 row sm:space-y-0 sm:space-x-2">
                 <div className="flex">
                   <Link
-                    href="/new-student-special"
+                    href="/new-to-yoga"
                     className="px-4 py-2 text-base font-medium text-center text-gray-900 rounded bg-brand-red hover:bg-orange-600 focus:outline-none focus:ring transition"
                   >
-                    New Student Special
+                    New To Yoga
                   </Link>
                 </div>
                 <div className="flex">
@@ -70,7 +70,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             <Link
               arrow
               href="/new-to-yoga"
-              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+              className="flex items-center py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
             >
               Learn More About Yoga
             </Link>
@@ -87,8 +87,8 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
           <div className="flex">
             <Link
               arrow
-              href="/our-studio"
-              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+              href="/studio"
+              className="flex items-center py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
             >
               See the Space
             </Link>
@@ -106,7 +106,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             <Link
               arrow
               href="/class-descriptions"
-              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+              className="flex items-center py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
             >
               View Our Classes
             </Link>
@@ -124,7 +124,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
             <Link
               arrow
               href="/events"
-              className="py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
+              className="flex items-center py-2 text-base font-medium text-center text-gray-900 rounded sm:mt-2 hover:text-black focus:outline-none focus:ring transition"
             >
               View the Calendar
             </Link>
@@ -165,7 +165,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                       <Link
                         arrow
                         href="/testimonials"
-                        className="text-base font-medium text-center text-gray-900 rounded focus:outline-none focus:ring transition"
+                        className="flex items-center text-base font-medium text-center text-gray-900 rounded focus:outline-none focus:ring transition"
                       >
                         Read Full Testimonial
                       </Link>
@@ -184,7 +184,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               <Link
                 arrow
                 href="/testimonials"
-                className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue focus:outline-none focus:ring transition"
+                className="flex items-center text-base font-medium text-center text-gray-100 rounded bg-brand-blue focus:outline-none focus:ring transition"
               >
                 View More Testimonials
               </Link>
@@ -327,7 +327,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                           <Link
                             arrow
                             href={`/events/${e.slug}`}
-                            className="text-base text-brand-blue"
+                            className="flex items-center text-base text-brand-blue"
                           >
                             Learn More About Event
                           </Link>
@@ -340,7 +340,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
                   <Link
                     arrow
                     href="/events"
-                    className="text-base font-medium text-center text-gray-100 rounded bg-brand-blue focus:outline-none focus:ring transition"
+                    className="flex items-center text-base font-medium text-center text-gray-100 rounded bg-brand-blue focus:outline-none focus:ring transition"
                   >
                     More Events
                   </Link>
@@ -613,7 +613,7 @@ const homePageQuery = gql`
     eventCollection(
       where: { endDate_gte: $currentDate }
       order: [date_ASC]
-      limit: 3
+      limit: 2
     ) {
       items {
         sys {

@@ -7,8 +7,6 @@ type LinkProps = NextLinkProps & {
 }
 
 const Link: React.FC<LinkProps> = props => {
-  const classNames = "flex items-center"
-
   return (
     <motion.span
       initial="idle"
@@ -19,7 +17,7 @@ const Link: React.FC<LinkProps> = props => {
       }}
     >
       <NextLink href={props.href}>
-        <a className={`${classNames} ${props.className || ""}`}>
+        <a className={props.className || ""}>
           {props.children}
           {props.arrow && (
             <motion.svg

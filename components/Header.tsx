@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "./Link"
 import { Menu } from "@headlessui/react"
 import { AnimatePresence, motion } from "framer-motion"
 
@@ -12,16 +12,14 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
       <header className={`px-4 ${noBackground ? "" : "bg-brand-blue"} sm:px-6`}>
         <div className="flex items-center justify-between pt-6 pb-4 mx-auto md:justify-start md:space-x-10 header-wrapper max-w-7xl">
           <div className="md:w-0 md:flex-1">
-            <Link href="/">
-              <a className="flex">
-                <Image
-                  src="/logo.svg"
-                  alt="Warrior One logo"
-                  width={100}
-                  height={104}
-                  layout="intrinsic"
-                />
-              </a>
+            <Link href="/" className="flex">
+              <Image
+                src="/logo.svg"
+                alt="Warrior One logo"
+                width={100}
+                height={104}
+                layout="intrinsic"
+              />
             </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden mobile-menu">
@@ -81,64 +79,60 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                         >
                           <Menu.Item>
                             {({ active }) => (
-                              <Link href="/class-schedule">
-                                <a
-                                  className={`${
-                                    active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700"
-                                  } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
-                                >
-                                  Schedule
-                                </a>
+                              <Link
+                                href="/class-schedule"
+                                className={`${
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700"
+                                } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
+                              >
+                                Schedule
                               </Link>
                             )}
                           </Menu.Item>
 
                           <Menu.Item>
                             {({ active }) => (
-                              <Link href="/class-descriptions">
-                                <a
-                                  className={`${
-                                    active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700"
-                                  } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
-                                >
-                                  Class Descriptions
-                                </a>
+                              <Link
+                                href="/class-descriptions"
+                                className={`${
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700"
+                                } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
+                              >
+                                Class Descriptions
                               </Link>
                             )}
                           </Menu.Item>
 
                           <Menu.Item>
                             {({ active }) => (
-                              <Link href="/new-student-special">
-                                <a
-                                  className={`${
-                                    active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700"
-                                  } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
-                                >
-                                  New Student Special
-                                </a>
+                              <Link
+                                href="/new-to-yoga"
+                                className={`${
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700"
+                                } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
+                              >
+                                New To Yoga
                               </Link>
                             )}
                           </Menu.Item>
 
                           <Menu.Item>
                             {({ active }) => (
-                              <Link href="/private-sessions">
-                                <a
-                                  className={`${
-                                    active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700"
-                                  } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
-                                >
-                                  Private Sessions
-                                </a>
+                              <Link
+                                href="/private-sessions"
+                                className={`${
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700"
+                                } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
+                              >
+                                Private Sessions
                               </Link>
                             )}
                           </Menu.Item>
@@ -150,20 +144,23 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
               </Menu>
             </div>
 
-            <Link href="/events">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
-                Events
-              </a>
+            <Link
+              href="/events"
+              className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition"
+            >
+              Events
             </Link>
-            <Link href="/pricing">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
-                Pricing
-              </a>
+            <Link
+              href="/pricing"
+              className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition"
+            >
+              Pricing
             </Link>
-            <Link href="/teacher-trainings">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
-                Teacher Training
-              </a>
+            <Link
+              href="/teacher-trainings"
+              className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition"
+            >
+              Teacher Training
             </Link>
             <div className="relative inline-block text-left">
               <Menu>
@@ -199,48 +196,45 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                         >
                           <Menu.Item>
                             {({ active }) => (
-                              <Link href="/tr1be">
-                                <a
-                                  className={`${
-                                    active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700"
-                                  } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
-                                >
-                                  Tr1be
-                                </a>
+                              <Link
+                                href="/tr1be"
+                                className={`${
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700"
+                                } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
+                              >
+                                Tr1be
                               </Link>
                             )}
                           </Menu.Item>
 
                           <Menu.Item>
                             {({ active }) => (
-                              <Link href="/blog">
-                                <a
-                                  className={`${
-                                    active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700"
-                                  } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
-                                >
-                                  Blog
-                                </a>
+                              <Link
+                                href="/blog"
+                                className={`${
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700"
+                                } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
+                              >
+                                Blog
                               </Link>
                             )}
                           </Menu.Item>
 
                           <Menu.Item>
                             {({ active }) => (
-                              <Link href="/gallery">
-                                <a
-                                  className={`${
-                                    active
-                                      ? "bg-gray-100 text-gray-900"
-                                      : "text-gray-700"
-                                  } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
-                                >
-                                  Gallery
-                                </a>
+                              <Link
+                                href="/gallery"
+                                className={`${
+                                  active
+                                    ? "bg-gray-100 text-gray-900"
+                                    : "text-gray-700"
+                                } block w-full text-left px-4 py-2 text-base font-medium leading-6 hover:bg-gray-50`}
+                              >
+                                Gallery
                               </Link>
                             )}
                           </Menu.Item>
@@ -251,20 +245,23 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                 )}
               </Menu>
             </div>
-            <Link href="/about">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
-                About
-              </a>
+            <Link
+              href="/about"
+              className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition"
+            >
+              About
             </Link>
-            <Link href="/faq">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
-                FAQ
-              </a>
+            <Link
+              href="/faq"
+              className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition"
+            >
+              FAQ
             </Link>
-            <Link href="/contact">
-              <a className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition">
-                Contact
-              </a>
+            <Link
+              href="/contact"
+              className="text-base font-medium text-gray-100 leading-6 hover:text-gray-300 focus:outline-none focus:text-gray-300 transition"
+            >
+              Contact
             </Link>
           </nav>
         </div>
@@ -284,15 +281,13 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                     <div className="flex items-center justify-between">
                       <div className="w-auto h-8">
                         <Link href="/">
-                          <a>
-                            <Image
-                              src="/logo-inverted.svg"
-                              alt="Warrior One logo"
-                              width={35}
-                              height={35}
-                              layout="intrinsic"
-                            />
-                          </a>
+                          <Image
+                            src="/logo-inverted.svg"
+                            alt="Warrior One logo"
+                            width={35}
+                            height={35}
+                            layout="intrinsic"
+                          />
                         </Link>
                       </div>
                       <div className="-mr-2">
@@ -320,85 +315,98 @@ export function Header({ noBackground }: { noBackground?: boolean }) {
                     </div>
                     <div>
                       <nav className="grid gap-y-6">
-                        <Link href="/class-schedule">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
-                            <div className="text-base font-medium text-gray-900 leading-6">
-                              Class Schedule
-                            </div>
-                          </a>
+                        <Link
+                          href="/class-schedule"
+                          className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition"
+                        >
+                          <div className="text-base font-medium text-gray-900 leading-6">
+                            Class Schedule
+                          </div>
                         </Link>
-                        <Link href="/class-descriptions">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
-                            <div className="text-base font-medium text-gray-900 leading-6">
-                              Class Descriptions
-                            </div>
-                          </a>
+                        <Link
+                          href="/class-descriptions"
+                          className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition"
+                        >
+                          <div className="text-base font-medium text-gray-900 leading-6">
+                            Class Descriptions
+                          </div>
                         </Link>
-                        <Link href="/new-student-special">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
-                            <div className="text-base font-medium text-gray-900 leading-6">
-                              New Student Special
-                            </div>
-                          </a>
+                        <Link
+                          href="/new-to-yoga"
+                          className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition"
+                        >
+                          <div className="text-base font-medium text-gray-900 leading-6">
+                            New To Yoga
+                          </div>
                         </Link>
-                        <Link href="/about">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
-                            <div className="text-base font-medium text-gray-900 leading-6">
-                              About
-                            </div>
-                          </a>
+                        <Link
+                          href="/about"
+                          className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition"
+                        >
+                          <div className="text-base font-medium text-gray-900 leading-6">
+                            About
+                          </div>
                         </Link>
-                        <Link href="/contact">
-                          <a className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition">
-                            <div className="text-base font-medium text-gray-900 leading-6">
-                              Contact
-                            </div>
-                          </a>
+                        <Link
+                          href="/contact"
+                          className="flex items-center p-3 -m-3 space-x-3 rounded-md hover:bg-gray-50 transition"
+                        >
+                          <div className="text-base font-medium text-gray-900 leading-6">
+                            Contact
+                          </div>
                         </Link>
                       </nav>
                     </div>
                   </div>
                   <div className="px-5 py-6 space-y-6">
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                      <Link href="/events">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          Events
-                        </a>
+                      <Link
+                        href="/events"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        Events
                       </Link>
-                      <Link href="/pricing">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          Pricing
-                        </a>
+                      <Link
+                        href="/pricing"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        Pricing
                       </Link>
-                      <Link href="/teacher-trainings">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          Teacher Training
-                        </a>
+                      <Link
+                        href="/teacher-trainings"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        Teacher Training
                       </Link>
-                      <Link href="/private-sessions">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          Private Sessions
-                        </a>
+                      <Link
+                        href="/private-sessions"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        Private Sessions
                       </Link>
-                      <Link href="/tr1be">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          Tr1be
-                        </a>
+                      <Link
+                        href="/tr1be"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        Tr1be
                       </Link>
-                      <Link href="/blog">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          Blog
-                        </a>
+                      <Link
+                        href="/blog"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        Blog
                       </Link>
-                      <Link href="/gallery">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          Gallery
-                        </a>
+                      <Link
+                        href="/gallery"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        Gallery
                       </Link>
-                      <Link href="/faq">
-                        <a className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition">
-                          FAQ
-                        </a>
+                      <Link
+                        href="/faq"
+                        className="text-base font-medium text-gray-900 leading-6 hover:text-gray-700 transition"
+                      >
+                        FAQ
                       </Link>
                     </div>
                   </div>

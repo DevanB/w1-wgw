@@ -1,7 +1,7 @@
 import { Layout } from "../components/Layout"
 
-export default function ClassSchedulePage() {
-  const pageTitle = "New Student Special"
+export default function NewToYogaPage() {
+  const pageTitle = "New To Yoga"
 
   return (
     <>

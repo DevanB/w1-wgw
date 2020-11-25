@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "./Link"
 import Image from "next/image"
 
 export function Footer() {
@@ -93,21 +93,10 @@ export function Footer() {
             Reserved.
           </small>
           <small className="text-gray-100 bg-brand-blue">
-            <Link href="/privacy-notice">
-              <a>Privacy Notice</a>
-            </Link>{" "}
-            |{" "}
-            <Link href="/terms-and-conditions">
-              <a>Terms & Conditions</a>
-            </Link>{" "}
-            |{" "}
-            <Link href="/covid-19">
-              <a>COVID-19 Update</a>
-            </Link>{" "}
-            |{" "}
-            <Link href="/faq">
-              <a>FAQ</a>
-            </Link>{" "}
+            <Link href="/privacy-notice">Privacy Notice</Link> |{" "}
+            <Link href="/terms-and-conditions">Terms & Conditions</Link> |{" "}
+            <Link href="/health">COVID-19 Update</Link> |{" "}
+            <Link href="/faq">FAQ</Link>
           </small>
         </div>
       </div>

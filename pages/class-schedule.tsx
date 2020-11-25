@@ -1,6 +1,6 @@
 import Head from "next/head"
-import Link from "next/link"
 import { useEffect } from "react"
+import Link from "../components/Link"
 import { Layout } from "../components/Layout"
 
 export default function ClassSchedulePage() {
@@ -34,8 +34,8 @@ export default function ClassSchedulePage() {
           </a>
           .<br />
           If your issues persist,{" "}
-          <Link href="/contact-us">
-            <a className="text-brand-blue">contact us</a>
+          <Link href="/contact-us" className="text-brand-blue">
+            contact us
           </Link>{" "}
           and we will be happy to help!
         </p>
