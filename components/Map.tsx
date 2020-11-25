@@ -27,7 +27,7 @@ const LocationPin: FC<LocationPinProps> = () => (
       />
     </svg>
     <Image
-      src="/logo.svg"
+      src="/logo-on-blue.svg"
       alt="Warrior One Winter Garden Windermere logo"
       width={50}
       height={52}
