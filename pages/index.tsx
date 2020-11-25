@@ -33,7 +33,7 @@ export default function IndexPage({ events, instructors, testimonials }: any) {
               <h2 className="max-w-xs font-serif text-2xl leading-tight text-yellow-200 sm:max-w-none">
                 Now offering in-studio, outdoor, and online classes
               </h2>
-              <div className="flex flex-col pt-4 sm:flex-row space-y-3 row sm:space-y-0 sm:space-x-2">
+              <div className="flex flex-col pt-4 sm:flex-row space-y-8 row sm:space-y-0 sm:space-x-2">
                 <div className="flex">
                   <Link
                     href="/new-to-yoga"

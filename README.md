@@ -10,6 +10,7 @@
 - [ ] Wiring up Contact Us form on home page
 - [ ] Wiring up mailing list on footer
 - [ ] Contact Us and mailing list form a11y
+- [ ] Check links on home page
 
 ## Technical To Do
 
