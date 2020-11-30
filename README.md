@@ -4,6 +4,8 @@
 
 ### Next Steps
 
+- [ ] Add blog post page with posts by author, recent and older post
+- [ ] Add instructor details with posts
 - [ ] Active classNames on links in header
 - [ ] Highlights content slide up?
 - [ ] Teacher Training Instructors something
